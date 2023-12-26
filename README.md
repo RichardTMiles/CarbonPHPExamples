@@ -1,17 +1,18 @@
 # CarbonPHP Examples
 
-CarbonPHP is free open-source software that ships with two major features. The first is a beautiful error reporting system with code output of where the issue arose. The second is a MySQL ORM for querying your database.
-
-<img width="1792" alt="Screenshot 2023-12-26 at 12 47 44 AM" src="https://github.com/RichardTMiles/CarbonPHPExamples/assets/9538357/be347928-d545-4b1f-a71b-18ebf3897405">
+[CarbonPHP is free open-source](https://github.com/CarbonORM/CarbonPHP) software that ships with two major features. The first is a beautiful error reporting system with code output of where the issue arose. The second is a MySQL ORM for querying your database. CarbonPHP is apart of the larger [CarbonORM organization](carbonorm.dev). 
 
 
-<img width="1792" alt="Screenshot 2023-12-26 at 12 47 36 AM" src="https://github.com/RichardTMiles/CarbonPHPExamples/assets/9538357/0b169cb8-0c04-4e59-81c8-be00394ccc84">
-
-
-<img width="1761" alt="Screenshot 2023-12-26 at 1 21 16 AM" src="https://github.com/RichardTMiles/CarbonPHPExamples/assets/9538357/bcbd4e62-bf33-44b2-bf2a-ca18775fb919">
-
+## Real time beautiful error reports!
 <img width="1792" alt="Screenshot 2023-12-26 at 1 30 50 AM" src="https://github.com/RichardTMiles/CarbonPHPExamples/assets/9538357/9d42b0c7-c4d1-40e2-8b37-7f02279e13da">
 
+## Logs using [error_log()](https://www.php.net/manual/en/function.error-log.php)
+<img width="1761" alt="Screenshot 2023-12-26 at 1 21 16 AM" src="https://github.com/RichardTMiles/CarbonPHPExamples/assets/9538357/bcbd4e62-bf33-44b2-bf2a-ca18775fb919">
+
+## Robust and Verbose
+<img width="1792" alt="Screenshot 2023-12-26 at 12 47 36 AM" src="https://github.com/RichardTMiles/CarbonPHPExamples/assets/9538357/0b169cb8-0c04-4e59-81c8-be00394ccc84">
+
+<img width="1792" alt="Screenshot 2023-12-26 at 12 47 44 AM" src="https://github.com/RichardTMiles/CarbonPHPExamples/assets/9538357/be347928-d545-4b1f-a71b-18ebf3897405">
 
 ## Explain how you would handle exceptions in PHP. Provide an example.
 
