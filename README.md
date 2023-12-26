@@ -65,7 +65,7 @@ Then visit http://localhost:8000/ in your browser. Some OS' support:
 open http://localhost:8000/
 ```
 
-### 4.1. Write a PHP script using PDO to connect to a MySQL database and execute a SELECT query.
+### Write a PHP script using PDO to connect to a MySQL database and execute a SELECT query.
 
 The following command will start a php server on port 8000 and serve the connect.php file.
 This demonstrates a connection to a MySQL database using PDO.
@@ -74,11 +74,9 @@ This demonstrates a connection to a MySQL database using PDO.
 php -S 0.0.0.0:8000 connect.php
 ```
 
-### 4.2. How would you prevent SQL injection in PHP? Provide an example.
-
 SQL injection is easily prevented by
 using [prepared statements](https://www.php.net/manual/en/pdo.prepared-statements.php).
-My project [CarbonPHP](https://github.com/CarbonORM/CarbonPHP) uses PDO and prepared statements by default and automates
+[CarbonPHP](https://github.com/CarbonORM/CarbonPHP) uses PDO and prepared statements by default and automates
 the process in a way that is seamless and simple to use.
 [This file](https://github.com/CarbonORM/CarbonPHP/blob/lts/carbonphp/Rest.php) is largely responsible for the REST ORM
 PDO foundation.
