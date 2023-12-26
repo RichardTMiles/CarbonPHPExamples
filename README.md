@@ -1,1 +1,77 @@
-# CarbonPHPExamples
+# CarbonPHP Examples
+
+## Explain how you would handle exceptions in PHP. Provide an example.
+
+There are two types of throwable issues in PHP: Exceptions and Errors. Both Errors and Exceptions extend the
+[Throwable](https://www.php.net/manual/en/class.throwable) interface. Both types of Throwable issues can be handled
+globally using the php
+internal [set_exception_handler](https://www.php.net/manual/en/function.set-exception-handler.php)
+and [set_error_handler](https://www.php.net/manual/en/function.set-error-handler.php) functions respectively. What types
+of errors are thrown can be controlled using
+the [error_reporting](https://www.php.net/manual/en/function.error-reporting.php)
+function. Some errors are not catchable using `Try {} catch () {}` blocks, such as
+[E_DEPRECATED](https://www.php.net/manual/en/errorfunc.constants.php#errorfunc.constants.errorlevels) and must be
+handled with global handlers. Other oddities should be
+noted [compile time vs runtime](https://stackoverflow.com/questions/59619285/deprecation-warning-not-catchable-in-php-7-4).
+Implementing a global handlers and try catch blocks should be done.
+
+Let's look at an example of
+my [Throwable Handler](https://github.com/CarbonORM/CarbonPHP/blob/lts/carbonphp/error/ThrowableHandler.php).
+If you do not have Composer installed globally you can use
+the [shell installer](https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md) also provided in
+this repo.
+
+```BASH
+chmod +x ./downlaodComposer.sh
+./downlaodComposer.sh
+```
+
+Update the configurations database username and password. The default is `root` and `password`.
+This is located ./examples/Sample.php.
+You can use this command ` cat ./examples/Sample.php | grep -n CarbonPHP::DB_USER` to find the line number or
+optionally use the following sed command to update the file.
+You'll still need to modify the user and password (MySQLUsername & MySQLPassword) from the command below.
+
+```BASH 
+sed -i '' -E "s|CarbonPHP::DB_USER => '(.*)',|CarbonPHP::DB_USER => 'MySQLUsername',|g" ./examples/Sample.php
+sed -i '' -E "s|CarbonPHP::DB_PASS => '(.*)',|CarbonPHP::DB_PASS => 'MySQLPassword',|g" ./examples/Sample.php
+```
+
+Once you have composer installed you can use it to install the dependencies and set up
+our [PSR-4 namespacing](https://www.php-fig.org/psr/psr-4/) for this project.
+
+```BASH
+./composer.phar install
+```
+
+Now we can run the example using php's built in web server.
+Note PHP's server does have a small memory leak, so it is not recommended for production or large projects.
+
+```BASH
+php -S 0.0.0.0:8000 error.php
+```
+
+Then visit http://localhost:8000/ in your browser. Some OS' support:
+
+```BASH
+open http://localhost:8000/
+```
+
+### 4.1. Write a PHP script using PDO to connect to a MySQL database and execute a SELECT query.
+
+The following command will start a php server on port 8000 and serve the connect.php file.
+This demonstrates a connection to a MySQL database using PDO.
+
+```BASH
+php -S 0.0.0.0:8000 connect.php
+```
+
+### 4.2. How would you prevent SQL injection in PHP? Provide an example.
+
+SQL injection is easily prevented by
+using [prepared statements](https://www.php.net/manual/en/pdo.prepared-statements.php).
+My project [CarbonPHP](https://github.com/CarbonORM/CarbonPHP) uses PDO and prepared statements by default and automates
+the process in a way that is seamless and simple to use.
+[This file](https://github.com/CarbonORM/CarbonPHP/blob/lts/carbonphp/Rest.php) is largely responsible for the REST ORM
+PDO foundation.
+
