@@ -1,6 +1,6 @@
 # CarbonPHP Examples
 
-[CarbonPHP is free open-source](https://github.com/CarbonORM/CarbonPHP) software that ships with two major features. The first is a beautiful error reporting system with code output of where the issue arose. The second is a MySQL ORM for querying your database. CarbonPHP is apart of the larger [CarbonORM organization](carbonorm.dev). 
+[CarbonPHP is free open-source](https://github.com/CarbonORM/CarbonPHP) software that ships with two major features. The first is a beautiful error reporting system with code output of where the issue arose. The second is a MySQL ORM for querying your database. CarbonPHP is apart of the larger [CarbonORM organization](https://carbonorm.dev/). 
 
 
 ## Real time beautiful error reports!
