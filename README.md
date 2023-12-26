@@ -1,5 +1,13 @@
 # CarbonPHP Examples
 
+CarbonPHP is free open-source software that ships with two major features. The first is a beautiful error reporting system with code output of where the issue arose. The second is a MySQL ORM for querying your database.
+
+<img width="1792" alt="Screenshot 2023-12-26 at 12 47 44 AM" src="https://github.com/RichardTMiles/CarbonPHPExamples/assets/9538357/be347928-d545-4b1f-a71b-18ebf3897405">
+
+
+<img width="1792" alt="Screenshot 2023-12-26 at 12 47 36 AM" src="https://github.com/RichardTMiles/CarbonPHPExamples/assets/9538357/0b169cb8-0c04-4e59-81c8-be00394ccc84">
+
+
 ## Explain how you would handle exceptions in PHP. Provide an example.
 
 There are two types of throwable issues in PHP: Exceptions and Errors. Both Errors and Exceptions extend the
