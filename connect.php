@@ -51,10 +51,6 @@ if (false === Users::post($post)) {
 
 }
 
-$br = '</br>';
-
-print "Successfully created a new user ($randomUserName).$br$br";
-
 $results = [];
 
 if (false === Users::get($results, null, [
@@ -70,16 +66,26 @@ if (false === Users::get($results, null, [
 
 }
 
+$results = json_encode($results, JSON_PRETTY_PRINT);
 
-$json = json_encode($GLOBALS['json']);
+$json = json_encode($GLOBALS['json'], JSON_PRETTY_PRINT);
 
 print <<<HTML
-<html>
+<html lang="en">
 <head>
     <title>CarbonPHP Example - PHP Querying</title>
 </head>
 <body>
-</pre><script>console.log('$json')</script>
+    <h1>Successfully created a new user ($randomUserName).</h1>
+    <pre>
+    $results
+    </pre>
+    <h2>global \$json;</h2>
+    <pre>
+    $json
+    </pre>
+    <script>console.log('$json')</script>
+
 </body>
 </html>
 HTML;

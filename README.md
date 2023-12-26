@@ -46,7 +46,10 @@ sed -i '' -E "s|CarbonPHP::DB_PASS => '(.*)',|CarbonPHP::DB_PASS => 'MySQLPasswo
 ```
 
 Once you have composer installed you can use it to install the dependencies and set up
-our [PSR-4 namespacing](https://www.php-fig.org/psr/psr-4/) for this project.
+our [PSR-4 namespacing](https://www.php-fig.org/psr/psr-4/) for this project. Many projects incorrectly use a global 
+error handler without unregistering it. This can cause issues with other libraries. Because of this it is common to 
+invoke `ThrowableHandler::start();` in multiple places. This is not necessary, but again common to override others poor 
+practices.
 
 ```BASH
 ./composer.phar install
@@ -64,6 +67,22 @@ Then visit http://localhost:8000/ in your browser. Some OS' support:
 ```BASH
 open http://localhost:8000/
 ```
+
+This script invokes the global error handler and throws an exception. The exception is caught and the error is displayed.
+For a more fine-grained control over the error handling you can use the `try {} catch () {}` blocks without starting the 
+global handler.
+
+```PHP
+try {
+
+    throw new Exception('This is a test');
+
+} catch (Throwable $e) {
+
+    ThrowableHandler::generateLog($e);
+}
+```
+
 
 ### Write a PHP script using PDO to connect to a MySQL database and execute a SELECT query.
 

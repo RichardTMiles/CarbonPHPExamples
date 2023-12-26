@@ -17,11 +17,7 @@ Composer::$loader = $loader;
 ThrowableHandler::start();
 
 // the following is a test of the error handler
-
 throw new Exception('This is a test');
-
-
-
 
 
 
