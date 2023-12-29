@@ -1,6 +1,6 @@
 # CarbonPHP Examples
 
-[CarbonPHP is free open-source](https://github.com/CarbonORM/CarbonPHP) software that ships with two major features. The first is a beautiful error reporting system with code output of where the issue arose. The second is a MySQL ORM for querying your database. CarbonPHP is apart of the larger [CarbonORM organization](https://carbonorm.dev/). 
+[CarbonPHP is free open-source](https://github.com/CarbonORM/CarbonPHP) software that ships with a few major features. The first we will cover is a beautiful error reporting system with code sample output of where the issue arose. The second is a MySQL ORM for querying your database. CarbonPHP is a part of the larger [CarbonORM organization](https://carbonorm.dev/). We plan to add a websocket demo here soon.
 
 
 ## Real time beautiful error reports!
@@ -36,8 +36,8 @@ the [shell installer](https://getcomposer.org/doc/faqs/how-to-install-composer-p
 this repo.
 
 ```BASH
-chmod +x ./downlaodComposer.sh
-./downlaodComposer.sh
+chmod +x ./downloadComposer.sh
+./downloadComposer.sh
 ```
 
 Update the configurations database username and password. The default is `root` and `password`.
